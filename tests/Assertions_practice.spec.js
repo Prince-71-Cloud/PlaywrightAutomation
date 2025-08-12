@@ -38,4 +38,13 @@ test('Assertions Practice', async ({page})=>{
      // element partially matches with text
     await expect(await page.locator('.page-title h1')).toContainText('Reg');
 
+    // input value has or not
+    const fNameInput = await page.locator('#FirstName');
+    await fNameInput.fill('test123');
+    await expect(fNameInput).toHaveValue('test123');
+
+    //elements has given length
+    const options = await page.locator("(//a[normalize-space()='Apparel'])");
+    await expect(options).toHaveCount(2);
+
 });
