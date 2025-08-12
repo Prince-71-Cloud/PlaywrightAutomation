@@ -11,6 +11,7 @@ import { defineConfig, devices } from '@playwright/test';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -38,7 +39,7 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'],
          launchOptions:{
-          slowMo:3000
+          slowMo:1500
         }
        },
     },
@@ -47,7 +48,7 @@ export default defineConfig({
       name: 'firefox',
       use: { ...devices['Desktop Firefox'],
          launchOptions:{
-          slowMo:3000
+          slowMo:1500
         }
        },
     },
@@ -56,7 +57,7 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'],
          launchOptions:{
-          slowMo:3000
+          slowMo:1500
         }
        },
     },
