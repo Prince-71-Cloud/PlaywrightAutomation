@@ -12,7 +12,7 @@ test('Checking File Upload', async ({page}) =>{
     await page.waitForTimeout(2000);
 });
 
-test.only('Checking Multiple Files Upload', async ({page})=>{
+test('Checking Multiple Files Upload', async ({page})=>{
     await page.goto('https://davidwalsh.name/demo/multiple-file-upload.php');
 
     
