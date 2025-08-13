@@ -33,6 +33,7 @@ test('Assertions Practice', async ({page})=>{
     await expect(registerButton).toHaveAttribute('type','submit');
 
     // element matches text
+    // match
     await expect(await page.locator('.page-title h1')).toHaveText('Register');
 
      // element partially matches with text

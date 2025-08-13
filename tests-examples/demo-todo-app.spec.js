@@ -418,6 +418,7 @@ async function createDefaultTodos(page) {
   }
 }
 
+//
 /**
  * @param {import('@playwright/test').Page} page
  * @param {number} expected
