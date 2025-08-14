@@ -16,16 +16,12 @@ test('test', async ({ page }) => {
   await page.getByRole('link', { name: 'Welcome ic3cream' }).click();
   await page.getByRole('link', { name: 'Samsung galaxy s6' }).click();
   await page.getByRole('link', { name: 'Cart', exact: true }).click();
-  await page.getByRole('link', { name: 'About us' }).click();
-  await page.getByText('No compatible source was').click();
-  //await page.getByRole('link', { name: 'Home (current)' }).click();
-  //await page.getByRole('heading', { name: '$650' }).click();
-  //await page.getByText('Nexus 6$650The Motorola').click();
-  //await page.locator('div:nth-child(3) > .card > a').click();
-  //await page.getByText('Address: 2390 El Camino Real').click();
-  //await page.getByText('Phone: +440').click();
-  //await page.getByRole('heading', { name: 'PRODUCT STORE' }).click();
-  //await page.getByText('We believe performance needs').click();
 
-  
+  await page.getByRole('link', { name: 'About us' }).click();
+  await page.locator('#videoModal').getByText('Close', { exact: true }).click();
+
+  await page.getByRole('cell', { name: 'Samsung galaxy s6' }).first().click();
+  await page.getByRole('button', { name: 'Place Order' }).click();
+
+  await page.waitForTimeout(2000);
 });
